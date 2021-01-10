@@ -27,41 +27,59 @@ namespace Asset_Electronics
         public static void ValidComputerInput(string choosenOffice)
         {
             var currentOffice = choosenOffice;
-            //List<Computer> computers = new List<Computer>();
-            string computerBrandInput = "";
-            string computerModelInput = "";
+            ////List<Computer> computers = new List<Computer>();
+            //string computerBrandInput = "";
+            //string computerModelInput = "";
 
-            // Print and read user inputs.
-            bool done = false;
-            while (!done)
+            //// Print and read user inputs.
+            //bool done = false;
+            //while (!done)
+            //{
+            //    Console.Write("Enter the computer brand: ");
+            //    computerBrandInput = Console.ReadLine();
+            //    if (string.IsNullOrWhiteSpace(computerBrandInput))
+            //    {
+            //        Console.WriteLine("Invalid input. Please try again.");
+            //        continue;
+            //    }
+            //    done = true;
+            //}
+
+            //done = false;
+            //while (!done)
+            //{
+            //    Console.Write("Enter the computer model: ");
+            //    computerModelInput = Console.ReadLine();
+            //    if (string.IsNullOrWhiteSpace(computerModelInput))
+            //    {
+            //        Console.WriteLine("Invalid input. Please try again.");
+            //        continue;
+            //    }
+            //    done = true;
+            //}
+
+            //var isValidPrice = ValidatePrice.ValidPrice();
+            //var isValidDate = ValidateDate.ValidDate();
+
+            //Electronics el = new Electronics(){
+            //    ElectronicsType = "Computer",
+            //    Brand = computerBrandInput,
+            //    Model = computerModelInput,
+            //    PurchasePrice = isValidPrice,
+            //    PurchaseDate = isValidDate
+            //};
+
+            Electronics el = new Electronics()
             {
-                Console.Write("Enter the computer brand: ");
-                computerBrandInput = Console.ReadLine();
-                if (string.IsNullOrWhiteSpace(computerBrandInput))
-                {
-                    Console.WriteLine("Invalid input. Please try again.");
-                    continue;
-                }
-                done = true;
-            }
+                ElectronicsType = "Computer",
+                Brand = "Apple",
+                Model = "sommer2013",
+                PurchasePrice = 123,
+                PurchaseDate = "1990-01-01"
+            };
 
-            done = false;
-            while (!done)
-            {
-                Console.Write("Enter the computer model: ");
-                computerModelInput = Console.ReadLine();
-                if (string.IsNullOrWhiteSpace(computerModelInput))
-                {
-                    Console.WriteLine("Invalid input. Please try again.");
-                    continue;
-                }
-                done = true;
-            }
 
-            var isValidPrice = ValidatePrice.ValidPrice();
-            var isValidDate = ValidateDate.ValidDate();
-
-            Office.addAsset(currentOffice, "Computer", computerBrandInput, computerModelInput, isValidPrice, isValidDate);
+            Office.addAsset(currentOffice, el);
             /*
             computers.Add(new Computer(computerBrandInput, computerModelInput, isValidPrice, isValidDate));
 

@@ -27,17 +27,20 @@ namespace Subsidiaries
         }
 
 
-        public static void addAsset(string officeName, string electronicsType, string brand, string model, double purchasePrice, string purchaseDate)
+        public static void addAsset(string officeName, Electronics el)
         {
             if (officeName == "SWE")
             {
                 //TODO add item to Swedish of(fice list.
-                Electronics.Asset.Add(new Electronics(electronicsType, brand, model, purchasePrice, purchaseDate));
+                
+                Electronics.Assets.Add(el);
+                
+                Console.WriteLine($"List count: {Electronics.Assets.Count}");
 
-                foreach (Electronics item in Electronics.Asset)
-                {
-                    Console.WriteLine(item);
-                }
+                //foreach (Electronics item in el)
+                //{
+                //    Console.WriteLine(item);
+                //}
             }
             Console.WriteLine("INTE SVERIGE");
 

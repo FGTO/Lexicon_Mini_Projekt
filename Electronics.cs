@@ -4,10 +4,14 @@ namespace Asset_Electronics
 {
     class Electronics
     {
+        
+        public static List<Electronics> Assets = new List<Electronics>();
+
         public Electronics()
         {
             
         }
+
         public Electronics(string electronicsType, string brand, string model, double purchasePrice, string purchaseDate)
         {
             ElectronicsType = electronicsType;
@@ -22,7 +26,7 @@ namespace Asset_Electronics
         public double PurchasePrice { get; set; }
         public string PurchaseDate { get; set; }
 
-        public static List<Electronics> Asset {get; set;}
+        
 
         //public List<Electronics> electronics = new List<Electronics>();
     }
