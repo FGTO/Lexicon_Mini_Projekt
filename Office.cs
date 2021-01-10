@@ -16,6 +16,15 @@ namespace Subsidiaries
             PurchaseDate = purchaseDate;
         }
 
+        public Office(string electronicsType, string brand, string model, double purchasePrice, string purchaseDate)
+        {
+            ElectronicsType = electronicsType;
+            Brand = brand;
+            Model = model;
+            PurchasePrice = purchasePrice;
+            PurchaseDate = purchaseDate;
+        }
+
 
         public static void addAsset(string officeName, string electronicsType, string brand, string model, double purchasePrice, string purchaseDate)
         {
