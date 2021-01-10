@@ -36,11 +36,12 @@ namespace Subsidiaries
                 Electronics.Assets.Add(el);
                 
                 Console.WriteLine($"List count: {Electronics.Assets.Count}");
-
-                //foreach (Electronics item in el)
-                //{
-                //    Console.WriteLine(item);
-                //}
+                
+              
+                foreach (Electronics item in Electronics.Assets)
+                {
+                   Console.WriteLine(item.PurchaseDate);
+                }
             }
             Console.WriteLine("INTE SVERIGE");
 

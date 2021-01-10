@@ -75,7 +75,7 @@ namespace Asset_Electronics
                 Brand = "Apple",
                 Model = "sommer2013",
                 PurchasePrice = 123,
-                PurchaseDate = "1990-01-01"
+                PurchaseDate = DateTime.Now.ToString()
             };
 
 
