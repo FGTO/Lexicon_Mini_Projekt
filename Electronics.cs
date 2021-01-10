@@ -22,6 +22,8 @@ namespace Asset_Electronics
         public string Model { get; set; }
         public double PurchasePrice { get; set; }
         public string PurchaseDate { get; set; }
+
+        public static List<Electronics> electronics { get; set; }
     }
 
 

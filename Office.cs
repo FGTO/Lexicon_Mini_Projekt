@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Asset_Electronics;
+using Asset_Tracking;
 
 namespace Subsidiaries
 {
@@ -31,7 +32,12 @@ namespace Subsidiaries
             if (officeName == "SWE")
             {
                 //TODO add item to Swedish of(fice list.
-                officeSWE.Add(electronicsType, brand, model, purchasePrice, purchaseDate);
+                officeSWE.Add(new Electronics(electronicsType, brand, model, purchasePrice, purchaseDate));
+            }
+
+            foreach (Office item in officeSWE )
+            {
+                Console.WriteLine(item);
             }
         }
 
