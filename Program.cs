@@ -30,7 +30,7 @@ namespace Asset_Tracking
                         break;
                     case 3:
                         Console.WriteLine("Add asset - UNITED STATES\n");
-                        office =  "US";
+                        office = "US";
                         innerSwitch(office);
                         break;
                     case 4:
@@ -57,8 +57,15 @@ namespace Asset_Tracking
             {
                 Console.WriteLine("1. Add new Computer:" + "\n2. Add new phone: " + "\n3. Print all asset." + "\n4. Quit");
 
-                var choice = int.Parse(Console.ReadLine());
-                switch (choice)
+                var input = Console.ReadLine();
+                if (string.IsNullOrWhiteSpace(input))
+                {
+                    Console.WriteLine("Invalid input. Try again.");
+                    continue;
+                }
+                var inputToInt = int.Parse(input);
+
+                switch (inputToInt)
                 {
                     case 1:
                         // TODO function for adding computer
@@ -78,7 +85,7 @@ namespace Asset_Tracking
                         break;
                     default:
                         Console.WriteLine("Invalid input. Try again.");
-                        break;
+                        continue;
                 }
             }
         }

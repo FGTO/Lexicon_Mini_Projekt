@@ -32,17 +32,22 @@ namespace Subsidiaries
             if (officeName == "SWE")
             {
                 //TODO add item to Swedish of(fice list.
-                officeSWE.Add(new Electronics(electronicsType, brand, model, purchasePrice, purchaseDate));
-            }
+                Electronics.Asset.Add(new Electronics(electronicsType, brand, model, purchasePrice, purchaseDate));
 
-            foreach (Office item in officeSWE )
-            {
-                Console.WriteLine(item);
+                foreach (Electronics item in Electronics.Asset)
+                {
+                    Console.WriteLine(item);
+                }
             }
+            Console.WriteLine("INTE SVERIGE");
+
+
+
+
         }
 
-
-        public static string OfficeName { get; private set; }
+        //List<Electronics> electronics = new List<Electronics>();
+        public string OfficeName { get; private set; }
         public string ElectronicsType { get; private set; }
         public string Brand { get; set; }
         public string Model { get; set; }
@@ -53,6 +58,7 @@ namespace Subsidiaries
         private static List<Office> officeGBR = new List<Office>();
         private static List<Office> officeUS = new List<Office>();
         private static List<Office> officeSWE = new List<Office>();
+
 
 
         //public List<Computer> Computers { get; set; }

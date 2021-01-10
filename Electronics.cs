@@ -15,7 +15,6 @@ namespace Asset_Electronics
             Model = model;
             PurchasePrice = purchasePrice;
             PurchaseDate = purchaseDate;
-            //List<Electronics> electronics = new List<Electronics>();
         }
         public string ElectronicsType { get; set; }
         public string Brand { get; set; }
@@ -23,7 +22,9 @@ namespace Asset_Electronics
         public double PurchasePrice { get; set; }
         public string PurchaseDate { get; set; }
 
-        public static List<Electronics> electronics { get; set; }
+        public static List<Electronics> Asset {get; set;}
+
+        //public List<Electronics> electronics = new List<Electronics>();
     }
 
 
